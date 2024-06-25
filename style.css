@@ -1,9 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0px;
     padding: 0;;
 }
 body{
     font-family: "Poppins", sans-serif;
+    background-color: darkblue;
 }
 h1{
     font-family: sans-serif;
@@ -20,8 +24,9 @@ a{
 .navbar{
     /* delete both of these to get rid of static navbar*/
     position: sticky; 
-    top: 0px; 
-    background-color: beige;
+    top: 0; 
+    z-index: 999;
+    background-color: #4682b4;
 }
 .navbar ul{
     list-style-type: none;
@@ -32,7 +37,7 @@ a{
     overflow: hidden;
 }
 .navbar a{
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 15px;
     display: block;
@@ -51,7 +56,8 @@ a{
     float: right;
 }
 .profile{
-    background-color: white;
+    background-color: darkblue;
+    color: white;
     position: relative;
     top: 50px;
     left: 50px;
@@ -80,6 +86,7 @@ a{
     position: absolute;
     top: 100px;
     left: 100px;
+    border: solid white 4px;
     border-radius: 50%;
 }
 .logo_text{
@@ -109,27 +116,27 @@ button{
     padding: 10px;
     margin: 5px;
     width: 10rem;
-    box-shadow: 0 0 5px greenyellow, 0 0 25px greenyellow;
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
     border: solid black 2px;
-    background-color: greenyellow;
+    background-color: cyan;
     cursor: pointer;
     transition: 0.3s box-shadow ease;
 }
 button:hover{
-    box-shadow: 0 0 5px greenyellow, 0 0 25px greenyellow,
-    0 0 100px greenyellow, 0 0 200px greenyellow;
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
 }
 .about_me{
     text-align: center;
-    height: 750px;
-    width: 100%;
-    background-color: purple;
-    position: relative;
-    top: 300px;
+    height: 850px;
+    background-color: white;
     /* bottom 3 center the div */
     /*left: 50px;*/
-    max-width: 1300px;
-    margin: 0 auto;
+    position: relative;
+    top: 250px;
+    /*
+    max-width: 1300px;*/
+    margin: 0 auto; 
 }
 .about_me_picture{
     height:470px;
@@ -140,16 +147,17 @@ button:hover{
     background-size: 100%;
     position: absolute;
     top: 150px;
-    left: 120px;
+    left: 250px;
+    border: solid darkblue 7px;
     border-radius: 20%;
 }
 .education_container{
     text-align: center;
-    height: 225px;
-    width: 400px;
+    height: 250px;
+    width: 500px;
     position: absolute;
-    top: 175px;
-    left: 675px;
+    top: 150px;
+    left: 720px;
     /* sets border for div */
     border: solid black 4px;
     background-color: white;
@@ -157,18 +165,18 @@ button:hover{
 }
 .about_me_description{
     height: 150px;
-    width: 500px;
+    width: 600px;
     background-color: white;
     position: absolute;
-    top: 420px;
-    left: 675px;
+    top: 430px;
+    left: 720px;
 }
 .experience_container{
-    background-color: yellow;
-    height: 700px;
+    /*background-color: yellow; */
+    background-color: white;
+    height: 800px;
     width: 100%;
-    max-width: 1300px;
-    top: 500px;
+    top: 250px;
     position: relative;
     margin: 0 auto;
 }
@@ -198,22 +206,87 @@ article{
 
 }
 .projects_container{
+    color: white;
     text-align: center;
-    height: 700px;
-    width: 100%;
-    max-width: 1300px;
-    background-color: aqua;
+    height: 800px;
+    
+    background-color: #161616;
    position: relative;
    margin: 0 auto;
-    top: 500px;
+   overflow: hidden;
+    top: 250px;
     
 }
-.contact_container{
-    height: 700px;
+.projects_container img{
     width: 100%;
-    max-width: 1300px;
-    background-color: bisque;
+    display: none;
+}
+.slides{
+    height: 400px;
+    width: 600px;
     position: relative;
     margin: 0 auto;
-    top: 500px;
+    top: 20px;
+
+}
+.slide{
+    height: 100%;
+    width: 100%;
+}
+img.displaySlide{
+    display: block;
+   animation: fade;
+   animation: 1.5s;
+}
+/* reference projects container to get them out of image div border */
+.slides button{
+    height: 3rempx;
+    width: 3.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.499);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.previous{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+
+.contact_container{
+    text-align: center;
+    height: 800px;
+    
+    /*background-color: bisque; */
+    background-color: white;
+    position: relative;
+    margin: 0 auto;
+    top: 250px;
+}
+.contact_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    height: 100px;
+    width: 500px;
+    background-color: bisque;
+    border-radius: 2rem;
+    border: solid black 2px;
+    position: relative;
+    top: 100px;
+    margin: 0 auto;
+
+}
+@keyframes fade{
+    from{opacity: .5;}
+    to {opacity: 1;}
 }
