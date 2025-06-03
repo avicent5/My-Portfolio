@@ -15,8 +15,8 @@ body{
     background: url(images/introBackground.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+    background-attachment: fixed; /* delete line if you want background image to be still*/
+    background-size: cover; 
     filter: blur(12px);
 }
 .intro_container{
@@ -26,12 +26,7 @@ body{
   width: 100%;
   top: 0px;
 }
-.skills_container{
-    height: 700px;
-    width: 100%;
-    background-color: palegreen;
-    
-}
+
 .name_intro_div{
     height: 400px;
     width: 400px;
@@ -69,7 +64,7 @@ body{
 .intro_content{
     height: 500px;
     width: 1100px;
-    background-color: greenyellow;
+   /* background-color: greenyellow;*/
     margin: 20px auto;
     display: flex;
     justify-content: center;
@@ -89,7 +84,7 @@ body{
     height: 500px;
     width: 1000px;
     margin: 50px;
-    background-color: aqua;
+    /*background-color: aqua;*/
 }
 .content p{
     font-size: 1.2rem;
@@ -120,7 +115,76 @@ body{
 }
 .sub_content_div{
     display: flex;
-    margin-top: 15px;
+    margin-top: 25px;
     height: 75px;
     width: 400px;
+}
+.image1Div{
+    height: 180px;
+    width: 400px;
+    background-color: aquamarine;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+}
+.image2Div{
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    border-radius: 1rem;
+    display: inline-block;
+}
+.skills_container{
+    height: 400px;
+    width: 100%;
+    background-color: palegreen;
+    background: url(images/skillsBackground.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.skills_content{
+    height: 200px;
+    width: 1000px;
+    
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills_content img{
+    height: 150px;
+    width: 150x;
+    margin: 50px;
+}
+.aboutMe_container{
+    height: 800px;
+    width: 100%;
+    background-color: rgba(224, 255, 255, 0.663);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutMe_content_div{
+    height: 600px;
+    width: 500px;
+    margin: 30px;
+    position: relative;
+}
+.aboutMe_content_div p{
+    font-family: "Verdana";
+    line-height: 1.5;
+}
+.sub_div{
+    border: solid lightslategray 2px;
+    height: 250px;
+    width: 250px;
+    background-color: white;
+    position: absolute;
+    top: 45%;
+    left: -25%;
+}
+.projects_container{
+    height: 700px;
+    width: 100%;
+
 }
