@@ -15,7 +15,7 @@ body{
     background: url(images/introBackground.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed; /* delete line if you want background image to be still*/
+   /* background-attachment: fixed; delete line if you want background image to be still*/
     background-size: cover; 
     filter: blur(12px);
 }
@@ -26,7 +26,28 @@ body{
   width: 100%;
   top: 0px;
 }
-
+.contactInfo_popup{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.closeContactDivBtn{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    cursor:pointer;
+    float: right;
+    font-size: 1.4rem;
+}
+.closeContactDivBtn:hover{
+    color: red;
+}
 .name_intro_div{
     height: 400px;
     width: 400px;
@@ -184,7 +205,80 @@ body{
     left: -25%;
 }
 .projects_container{
-    height: 700px;
+    height: 900px;
     width: 100%;
-
+    background: url(images/projectSectionBackground.com.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.project_content_div{
+    height: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.personal_project{
+    height: 550px;
+    width: 450px;
+    background-color: white;
+    margin: 35px;
+    border-radius: 1rem;
+}
+.divTitle{
+    font-family: "arial";
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 25px;
+}
+.project{
+    position: relative;
+    height: 275px;
+    width: 375px;
+    background-color: #0096FF;
+    margin: 30px auto;
+}
+.projectDescription{
+    margin-top: 20px;
+    line-height: 1.5;
+    font-family: 'Arial';
+}
+.buttonRedirectDiv{
+    position: absolute;
+    height: 41px;
+    width: 100%;
+    opacity:0;
+    top: 80%;
+    transition: opacity 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: 10; */
+}
+.project img:hover + .buttonRedirectDiv{
+    opacity: 1;    /* opacity to dim div
+    div flickers because when you try to hover over it, its supposed to go away. by hovering it it starts to flicker since its confused
+    search and see how to get the div still outside the container and proceed foward
+    use opacity w3schools
+    visibility deleted
+    */
+}
+.buttonRedirectDiv:hover{
+   opacity: 1;
+}
+.projectBtn{
+    height: 41px;
+    width: 170px;
+    background-color: #0096FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin: 5px;
+    border-radius: 5%;
+}
+.projectBtn:hover{
+    background-color: aquamarine;
+    color: black;
 }

@@ -1,34 +1,11 @@
-const slides = document.querySelectorAll(".slides img");
-let slideIndex = 0;
-let intervalId = null;
+let contactMeButton = document.querySelector('.contactInfo_popup');
+contactMeButton.style.display = "none";
 
-document.addEventListener("DOMContentLoaded", initializeSlider);
+let displayContactDiv = () => {
+contactMeButton.style.display = "block";
+}
 
-function initializeSlider(){
-    if(slides.length > 0){
-        slides[slideIndex].classList.add("displaySlide");
-        intervalId = setInterval(nextSlide, 5000);
-    }
-}
-function showSlide(index){
-    if(index >= slides.length){
-        slideIndex = 0;
-    }
-    else if(index < 0){
-slideIndex = slides.length - 1;
-    }
-    slides.forEach(slide => {
-        slide.classList.remove("displaySlide");
-    });
-    slides[slideIndex].classList.add("displaySlide");
-}
-function prevSlide(){
-    clearInterval(intervalId);
-    slideIndex--;
-    showSlide(slideIndex);
-}
-function nextSlide(){
-    
-    slideIndex++;
-    showSlide(slideIndex);
+let closeContactInfoDiv = document.querySelector('.closeContactDivBtn')
+let closeContactDiv = () => {
+   contactMeButton.style.display = "none"; 
 }

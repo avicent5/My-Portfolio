@@ -18,7 +18,15 @@
         <a href="">About</a>
         <a href="">Projects</a>
         
-        <button class="contact_me_btn" style="margin-left: 250px;">Contact Me</button>
+        <button class="contact_me_btn" style="margin-left: 250px;" onclick="displayContactDiv()">Contact Me</button>
+    </div>
+    <div class="contactInfo_popup">
+        <button class="closeContactDivBtn" onclick="closeContactDiv()">X</button>
+        <h1 style="margin: 30px; text-align: center;">My Contact Info</h1>
+        <img src="images/callLogo.png" alt="" style="height: 75px;  width: 75px; border-radius: 80%; display: block; margin: 20px auto;">
+        <p style="text-align: center;">678-663-1270</p>
+        <img src="images/gmailLogo.png" alt="" style="height: 75px;  width: 75px; border-radius: 80%; display: block; margin: 20px auto;">
+        <p style="text-align: center;">vicenteanthony40@gmail.com</p>
     </div>
     <div class="intro_content">
         <div class="content">
@@ -50,6 +58,7 @@
             <!--Image Here-->
             </div>
             <div class="image2Div">
+                <img src="images/AV Selfie.png" alt="" style="height: 100%; width: 100%; border-radius: 1rem;">
                 <!--Image Here-->
             </div>
             <div class="image2Div">
@@ -57,6 +66,7 @@
             </div>
           <!--<img src="images/webDevPic.png" alt="" style="height: 80%; width: 100%;"> -->  
         </div>
+        
     </div>
     
    </div>
@@ -96,7 +106,43 @@
    
 </div>
 <div class="projects_container">
-    <h1 style="text-align: center; margin-top: 35px;">My projects</h1>
+    <!-- make div have a snapshot of your project, user should be able to hover and two buttons at the bottom should appear-->
+    <!-- buttons should redirect user to either the project itself or the github repo, provide brief description at the bottom. use background color from the inspired portolio use daniel micheal as other inspo-->
+    <!--div at the intro section came be moved down by moving the container as a whole-->
+<h1 style="text-align: center; padding-top: 50px; color: white; font-size: 2.5rem;">Personal Projects</h1>
+
+    
+    <div class="project_content_div">
+        <div class="personal_project">
+            <p class="divTitle">Larry's Landscaping</p>
+            <div class="project">
+                <img src="images/landscapingProject.png" alt="" style="height: 100%; width: 100%">
+                <div class="buttonRedirectDiv">
+                    <button class="projectBtn">Demo</button>
+                    <button class="projectBtn">Github</button>
+                </div>
+                <p class="projectDescription">
+                    A project showcasing a sample landscaping business website. Developed using HTML, CSS, JavaScript.
+                </p>
+            </div>
+        </div>
+        <div class="personal_project">
+            <p class="divTitle">Tony's Tacos</p>
+            <div class="project">
+                <img src="images/mexRestaurantProject.png" alt="" style="height: 100%; width: 100%">
+                <div class="buttonRedirectDiv">
+                    <button class="projectBtn">Demo</button>
+                    <button class="projectBtn">Github</button>
+                </div>
+                <p class="projectDescription">
+                    A project built to showcase a typical website for a mexican restaurant.
+                    It features common things like a menu page, contact page, and place an order page.
+
+                     Developed using HTML, CSS, JavaScript.
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
     
     <script src="script.js"></script>
